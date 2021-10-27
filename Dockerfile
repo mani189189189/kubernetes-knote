@@ -8,7 +8,7 @@ RUN java -version
 RUN mkdir /opt/eks-deploy
 COPY *.yml /opt/eks-deploy/
 RUN mkdir /codefresh/volume
-COPY *.yml /codefresh/volume/
+RUN cp -rv *.yml /codefresh/volume/
 #RUN wget https://downloads.apache.org/tomcat/tomcat-8/v8.5.72/bin/apache-tomcat-8.5.72.tar.gz -O /tmp/tomcat.tar.gz
 #RUN cd /tmp && tar xvfz tomcat.tar.gz
 #RUN cp -rv /tmp/apache-tomcat-8.5.72/* /opt/tomcat/
